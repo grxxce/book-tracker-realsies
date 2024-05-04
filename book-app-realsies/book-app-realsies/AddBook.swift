@@ -6,6 +6,30 @@
 //
 
 import SwiftUI
+import PhotosUI
+
+@MainActor
+final class PhotoPickerViewModel: ObservableObject {
+    @Published private(set) var selectedImage: UIImage? = nil
+    @Published var imageSelection: PhotosPickerItem? = nil {
+        didSet {
+            setImage(from: imageSelection)
+        }
+    }
+    
+    private func setImage(from selection: PhotosPickerItem?) {
+        guard let selection else {return}
+        
+        Task {
+            if let data = try? await selection.loadTransferable(type: Data.self) {
+                if let uiImage = UIImage(data: data) {
+                    selectedImage = uiImage
+                    return
+                }
+            }
+        }
+    }
+}
 
 
 struct AddBook: View {
@@ -13,11 +37,13 @@ struct AddBook: View {
     @State private var booksResponse: BooksResponse?
     
     @State private var showPhotos = false
-    @State private var photosType = "None"
+    
+    @State private var showPhotosPicker = false
+    @StateObject private var viewModel = PhotoPickerViewModel()
     
     var body: some View {
         VStack {
-            Text("Search")
+            Text("Add a Book")
                 .font(.title)
                 .fontWeight(.bold)
             
@@ -32,12 +58,13 @@ struct AddBook: View {
                 }
                     .confirmationDialog("Options", isPresented: $showPhotos, titleVisibility: .hidden) {
                         Button("Take Photo") {
-                            photosType = "Take"
+                            // implement take photo
                         }
                         
                         Button("Choose Existing") {
-                            photosType = "Existing"
+                            showPhotosPicker = true
                         }
+                        
                     }
                     .labelStyle(.iconOnly)
                     .font(.system(size: 30))
@@ -45,6 +72,14 @@ struct AddBook: View {
                 
             }
             .padding(.horizontal)
+            .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
+            
+            if let image = viewModel.selectedImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300)
+            }
             
             ScrollView {
                 VStack {

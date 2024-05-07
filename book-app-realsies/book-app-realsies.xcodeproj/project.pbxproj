@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		712E58132BE6433500F0D9F3 /* BookPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712E58122BE6433500F0D9F3 /* BookPhoto.swift */; };
+		717C0ABB2BE3EF7B001D807C /* AddBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C0ABA2BE3EF7B001D807C /* AddBook.swift */; };
+		717C0ABD2BE3F9A6001D807C /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C0ABC2BE3F9A6001D807C /* BookData.swift */; };
+		717C0ABF2BE3FF21001D807C /* ScanAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C0ABE2BE3FF21001D807C /* ScanAdd.swift */; };
+		717C0AC12BE4DD93001D807C /* BookListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C0AC02BE4DD93001D807C /* BookListing.swift */; };
+		717E3B3C2BEA1D9A00C7C2E5 /* SearchFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717E3B3B2BEA1D9A00C7C2E5 /* SearchFunction.swift */; };
+		717E3B3E2BEA215C00C7C2E5 /* BookSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717E3B3D2BEA215C00C7C2E5 /* BookSearch.swift */; };
+		71F4FAB12BE3CDEC00D2B858 /* book_app_realsiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FAB02BE3CDEC00D2B858 /* book_app_realsiesApp.swift */; };
+		71F4FAB32BE3CDEC00D2B858 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FAB22BE3CDEC00D2B858 /* ContentView.swift */; };
+		71F4FAB52BE3CDEC00D2B858 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FAB42BE3CDEC00D2B858 /* Item.swift */; };
+		71F4FAB72BE3CDEE00D2B858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F4FAB62BE3CDEE00D2B858 /* Assets.xcassets */; };
+		71F4FABA2BE3CDEE00D2B858 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F4FAB92BE3CDEE00D2B858 /* Preview Assets.xcassets */; };
+		71F4FAC42BE3CDEE00D2B858 /* book_app_realsiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FAC32BE3CDEE00D2B858 /* book_app_realsiesTests.swift */; };
+		71F4FACE2BE3CDEE00D2B858 /* book_app_realsiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FACD2BE3CDEE00D2B858 /* book_app_realsiesUITests.swift */; };
+		71F4FAD02BE3CDEE00D2B858 /* book_app_realsiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FACF2BE3CDEE00D2B858 /* book_app_realsiesUITestsLaunchTests.swift */; };
+		71F4FADD2BE3D1DB00D2B858 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FADC2BE3D1DB00D2B858 /* WelcomePage.swift */; };
+		71F4FADF2BE3D3C000D2B858 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FADE2BE3D3C000D2B858 /* Library.swift */; };
+		71F4FAE12BE3E6DB00D2B858 /* BookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4FAE02BE3E6DB00D2B858 /* BookCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71F4FAC02BE3CDEE00D2B858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71F4FAA52BE3CDEC00D2B858 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71F4FAAC2BE3CDEC00D2B858;
+			remoteInfo = "book-app-realsies";
+		};
+		71F4FACA2BE3CDEE00D2B858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71F4FAA52BE3CDEC00D2B858 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71F4FAAC2BE3CDEC00D2B858;
+			remoteInfo = "book-app-realsies";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		712E58122BE6433500F0D9F3 /* BookPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPhoto.swift; sourceTree = "<group>"; };
+		717C0ABA2BE3EF7B001D807C /* AddBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBook.swift; sourceTree = "<group>"; };
+		717C0ABC2BE3F9A6001D807C /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
+		717C0ABE2BE3FF21001D807C /* ScanAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAdd.swift; sourceTree = "<group>"; };
+		717C0AC02BE4DD93001D807C /* BookListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListing.swift; sourceTree = "<group>"; };
+		717C0AC22BE4F29F001D807C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		717E3B3B2BEA1D9A00C7C2E5 /* SearchFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFunction.swift; sourceTree = "<group>"; };
+		717E3B3D2BEA215C00C7C2E5 /* BookSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearch.swift; sourceTree = "<group>"; };
+		71F4FAAD2BE3CDEC00D2B858 /* book-app-realsies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-app-realsies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F4FAB02BE3CDEC00D2B858 /* book_app_realsiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book_app_realsiesApp.swift; sourceTree = "<group>"; };
+		71F4FAB22BE3CDEC00D2B858 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71F4FAB42BE3CDEC00D2B858 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		71F4FAB62BE3CDEE00D2B858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71F4FAB92BE3CDEE00D2B858 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71F4FABF2BE3CDEE00D2B858 /* book-app-realsiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "book-app-realsiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F4FAC32BE3CDEE00D2B858 /* book_app_realsiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book_app_realsiesTests.swift; sourceTree = "<group>"; };
+		71F4FAC92BE3CDEE00D2B858 /* book-app-realsiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "book-app-realsiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F4FACD2BE3CDEE00D2B858 /* book_app_realsiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book_app_realsiesUITests.swift; sourceTree = "<group>"; };
+		71F4FACF2BE3CDEE00D2B858 /* book_app_realsiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book_app_realsiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71F4FADC2BE3D1DB00D2B858 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		71F4FADE2BE3D3C000D2B858 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		71F4FAE02BE3E6DB00D2B858 /* BookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71F4FAAA2BE3CDEC00D2B858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FABC2BE3CDEE00D2B858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FAC62BE3CDEE00D2B858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71F4FAA42BE3CDEC00D2B858 = {
+			isa = PBXGroup;
+			children = (
+				71F4FAAF2BE3CDEC00D2B858 /* book-app-realsies */,
+				71F4FAC22BE3CDEE00D2B858 /* book-app-realsiesTests */,
+				71F4FACC2BE3CDEE00D2B858 /* book-app-realsiesUITests */,
+				71F4FAAE2BE3CDEC00D2B858 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71F4FAAE2BE3CDEC00D2B858 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71F4FAAD2BE3CDEC00D2B858 /* book-app-realsies.app */,
+				71F4FABF2BE3CDEE00D2B858 /* book-app-realsiesTests.xctest */,
+				71F4FAC92BE3CDEE00D2B858 /* book-app-realsiesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71F4FAAF2BE3CDEC00D2B858 /* book-app-realsies */ = {
+			isa = PBXGroup;
+			children = (
+				717C0AC22BE4F29F001D807C /* Info.plist */,
+				71F4FAB02BE3CDEC00D2B858 /* book_app_realsiesApp.swift */,
+				71F4FAB22BE3CDEC00D2B858 /* ContentView.swift */,
+				712E58122BE6433500F0D9F3 /* BookPhoto.swift */,
+				71F4FAE02BE3E6DB00D2B858 /* BookCard.swift */,
+				717C0AC02BE4DD93001D807C /* BookListing.swift */,
+				71F4FADE2BE3D3C000D2B858 /* Library.swift */,
+				717C0ABE2BE3FF21001D807C /* ScanAdd.swift */,
+				717C0ABA2BE3EF7B001D807C /* AddBook.swift */,
+				717E3B3D2BEA215C00C7C2E5 /* BookSearch.swift */,
+				717E3B3B2BEA1D9A00C7C2E5 /* SearchFunction.swift */,
+				717C0ABC2BE3F9A6001D807C /* BookData.swift */,
+				71F4FADC2BE3D1DB00D2B858 /* WelcomePage.swift */,
+				71F4FAB42BE3CDEC00D2B858 /* Item.swift */,
+				71F4FAB62BE3CDEE00D2B858 /* Assets.xcassets */,
+				71F4FAB82BE3CDEE00D2B858 /* Preview Content */,
+			);
+			path = "book-app-realsies";
+			sourceTree = "<group>";
+		};
+		71F4FAB82BE3CDEE00D2B858 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				71F4FAB92BE3CDEE00D2B858 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71F4FAC22BE3CDEE00D2B858 /* book-app-realsiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				71F4FAC32BE3CDEE00D2B858 /* book_app_realsiesTests.swift */,
+			);
+			path = "book-app-realsiesTests";
+			sourceTree = "<group>";
+		};
+		71F4FACC2BE3CDEE00D2B858 /* book-app-realsiesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71F4FACD2BE3CDEE00D2B858 /* book_app_realsiesUITests.swift */,
+				71F4FACF2BE3CDEE00D2B858 /* book_app_realsiesUITestsLaunchTests.swift */,
+			);
+			path = "book-app-realsiesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71F4FAAC2BE3CDEC00D2B858 /* book-app-realsies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71F4FAD32BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsies" */;
+			buildPhases = (
+				71F4FAA92BE3CDEC00D2B858 /* Sources */,
+				71F4FAAA2BE3CDEC00D2B858 /* Frameworks */,
+				71F4FAAB2BE3CDEC00D2B858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "book-app-realsies";
+			productName = "book-app-realsies";
+			productReference = 71F4FAAD2BE3CDEC00D2B858 /* book-app-realsies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71F4FABE2BE3CDEE00D2B858 /* book-app-realsiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71F4FAD62BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsiesTests" */;
+			buildPhases = (
+				71F4FABB2BE3CDEE00D2B858 /* Sources */,
+				71F4FABC2BE3CDEE00D2B858 /* Frameworks */,
+				71F4FABD2BE3CDEE00D2B858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71F4FAC12BE3CDEE00D2B858 /* PBXTargetDependency */,
+			);
+			name = "book-app-realsiesTests";
+			productName = "book-app-realsiesTests";
+			productReference = 71F4FABF2BE3CDEE00D2B858 /* book-app-realsiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		71F4FAC82BE3CDEE00D2B858 /* book-app-realsiesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71F4FAD92BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsiesUITests" */;
+			buildPhases = (
+				71F4FAC52BE3CDEE00D2B858 /* Sources */,
+				71F4FAC62BE3CDEE00D2B858 /* Frameworks */,
+				71F4FAC72BE3CDEE00D2B858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71F4FACB2BE3CDEE00D2B858 /* PBXTargetDependency */,
+			);
+			name = "book-app-realsiesUITests";
+			productName = "book-app-realsiesUITests";
+			productReference = 71F4FAC92BE3CDEE00D2B858 /* book-app-realsiesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71F4FAA52BE3CDEC00D2B858 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					71F4FAAC2BE3CDEC00D2B858 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					71F4FABE2BE3CDEE00D2B858 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 71F4FAAC2BE3CDEC00D2B858;
+					};
+					71F4FAC82BE3CDEE00D2B858 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 71F4FAAC2BE3CDEC00D2B858;
+					};
+				};
+			};
+			buildConfigurationList = 71F4FAA82BE3CDEC00D2B858 /* Build configuration list for PBXProject "book-app-realsies" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71F4FAA42BE3CDEC00D2B858;
+			productRefGroup = 71F4FAAE2BE3CDEC00D2B858 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71F4FAAC2BE3CDEC00D2B858 /* book-app-realsies */,
+				71F4FABE2BE3CDEE00D2B858 /* book-app-realsiesTests */,
+				71F4FAC82BE3CDEE00D2B858 /* book-app-realsiesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71F4FAAB2BE3CDEC00D2B858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F4FABA2BE3CDEE00D2B858 /* Preview Assets.xcassets in Resources */,
+				71F4FAB72BE3CDEE00D2B858 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FABD2BE3CDEE00D2B858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FAC72BE3CDEE00D2B858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71F4FAA92BE3CDEC00D2B858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F4FAE12BE3E6DB00D2B858 /* BookCard.swift in Sources */,
+				71F4FAB32BE3CDEC00D2B858 /* ContentView.swift in Sources */,
+				717C0ABB2BE3EF7B001D807C /* AddBook.swift in Sources */,
+				717E3B3E2BEA215C00C7C2E5 /* BookSearch.swift in Sources */,
+				717C0AC12BE4DD93001D807C /* BookListing.swift in Sources */,
+				71F4FADD2BE3D1DB00D2B858 /* WelcomePage.swift in Sources */,
+				71F4FADF2BE3D3C000D2B858 /* Library.swift in Sources */,
+				71F4FAB52BE3CDEC00D2B858 /* Item.swift in Sources */,
+				717E3B3C2BEA1D9A00C7C2E5 /* SearchFunction.swift in Sources */,
+				717C0ABF2BE3FF21001D807C /* ScanAdd.swift in Sources */,
+				712E58132BE6433500F0D9F3 /* BookPhoto.swift in Sources */,
+				717C0ABD2BE3F9A6001D807C /* BookData.swift in Sources */,
+				71F4FAB12BE3CDEC00D2B858 /* book_app_realsiesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FABB2BE3CDEE00D2B858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F4FAC42BE3CDEE00D2B858 /* book_app_realsiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F4FAC52BE3CDEE00D2B858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F4FACE2BE3CDEE00D2B858 /* book_app_realsiesUITests.swift in Sources */,
+				71F4FAD02BE3CDEE00D2B858 /* book_app_realsiesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71F4FAC12BE3CDEE00D2B858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71F4FAAC2BE3CDEC00D2B858 /* book-app-realsies */;
+			targetProxy = 71F4FAC02BE3CDEE00D2B858 /* PBXContainerItemProxy */;
+		};
+		71F4FACB2BE3CDEE00D2B858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71F4FAAC2BE3CDEC00D2B858 /* book-app-realsies */;
+			targetProxy = 71F4FACA2BE3CDEE00D2B858 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		71F4FAD12BE3CDEE00D2B858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71F4FAD22BE3CDEE00D2B858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71F4FAD42BE3CDEE00D2B858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"book-app-realsies/Preview Content\"";
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "book-app-realsies/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app lets you browse and edit your photos";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71F4FAD52BE3CDEE00D2B858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"book-app-realsies/Preview Content\"";
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "book-app-realsies/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app lets you browse and edit your photos";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71F4FAD72BE3CDEE00D2B858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/book-app-realsies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/book-app-realsies";
+			};
+			name = Debug;
+		};
+		71F4FAD82BE3CDEE00D2B858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsiesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/book-app-realsies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/book-app-realsies";
+			};
+			name = Release;
+		};
+		71F4FADA2BE3CDEE00D2B858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "book-app-realsies";
+			};
+			name = Debug;
+		};
+		71F4FADB2BE3CDEE00D2B858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36Z7XXQJ23;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.book-app-realsiesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "book-app-realsies";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71F4FAA82BE3CDEC00D2B858 /* Build configuration list for PBXProject "book-app-realsies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F4FAD12BE3CDEE00D2B858 /* Debug */,
+				71F4FAD22BE3CDEE00D2B858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71F4FAD32BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F4FAD42BE3CDEE00D2B858 /* Debug */,
+				71F4FAD52BE3CDEE00D2B858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71F4FAD62BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F4FAD72BE3CDEE00D2B858 /* Debug */,
+				71F4FAD82BE3CDEE00D2B858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71F4FAD92BE3CDEE00D2B858 /* Build configuration list for PBXNativeTarget "book-app-realsiesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F4FADA2BE3CDEE00D2B858 /* Debug */,
+				71F4FADB2BE3CDEE00D2B858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71F4FAA52BE3CDEC00D2B858 /* Project object */;
+}

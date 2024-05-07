@@ -18,6 +18,7 @@ final class PhotoPickerViewModel: ObservableObject {
     }
     
     private func setImage(from selection: PhotosPickerItem?) {
+        print("picker initiated")
         guard let selection else {return}
         
         Task {
@@ -33,13 +34,12 @@ final class PhotoPickerViewModel: ObservableObject {
 
 
 struct AddBook: View {
-    @State private var searchText = ""
-    @State private var booksResponse: BooksResponse?
+    @StateObject private var searchViewModel = SearchViewModel()
     
-    @State private var showPhotos = false
-    
-    @State private var showPhotosPicker = false
+//    Add requirements for Photos Picker
     @StateObject private var viewModel = PhotoPickerViewModel()
+    @State private var showPhotos = false
+    @State private var showPhotosPicker = false
     
     var body: some View {
         VStack {
@@ -47,20 +47,20 @@ struct AddBook: View {
                 .font(.title)
                 .fontWeight(.bold)
             
-            HStack {
-                TextField("Search books...",text: $searchText, onCommit:performSearch )
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-                
-                Button("pick", systemImage: "camera.fill") {
-                    showPhotos = true
-                }
+            VStack {
+                HStack {
+                    //                SEARCH BAR
+                    BookSearch(searchViewModel: searchViewModel)
+                    
+                    
+                    //                CAMERA
+                    Button("pick", systemImage: "camera.fill") {
+                        showPhotos = true
+                    }
                     .confirmationDialog("Options", isPresented: $showPhotos, titleVisibility: .hidden) {
                         Button("Take Photo") {
-                            // implement take photo
+                            // TODO: implement take photo
                         }
-                        
                         Button("Choose Existing") {
                             showPhotosPicker = true
                         }
@@ -69,54 +69,28 @@ struct AddBook: View {
                     .labelStyle(.iconOnly)
                     .font(.system(size: 30))
                     .padding(.trailing, 10)
+                }
                 
-            }
-            .padding(.horizontal)
-            .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
-            
-            if let image = viewModel.selectedImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 300)
-            }
-            
-            ScrollView {
-                VStack {
-                    ForEach(booksResponse?.items ?? [Book.mock]) {book in
-                        BookListing(book: book)
+//                SEARCHING BY IMAGE
+                if let image = viewModel.selectedImage {
+                    BookPhoto(bookPhoto: image, searchViewModel: searchViewModel)
+                }
+                
+//                BOOK LISTING
+                ScrollView {
+                    VStack {
+                        ForEach(BookSearch(searchViewModel: searchViewModel).searchViewModel.booksResponse?.items ?? [Book.mock]) {book in
+                            BookListing(book: book)
+                        }
                     }
                 }
+                .padding(.horizontal)
+                .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
             }
-            
             
             Spacer()
         }
         .padding([.top])
-        
-    }
-    
-    func performSearch() {
-        print("Searching: \(searchText)")
-        
-        guard let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q={\(searchText)}") else { return }
-        print("url is: \(url)")
-            
-        let task = URLSession.shared.dataTask(with: url) { 
-            data, response, error in
-                guard let data = data, error == nil else { return }
-
-            do {
-                let decoder = JSONDecoder()
-                booksResponse = try decoder.decode(BooksResponse.self, from: data)
-                DispatchQueue.main.async {
-                    
-                }
-            } catch {
-                print("decoding error")
-            }
-        }
-        task.resume()
     }
 }
 

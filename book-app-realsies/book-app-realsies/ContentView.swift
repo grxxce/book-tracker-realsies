@@ -3,7 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/2/24.
-//
+//  ------------------------
+//  This is the main parent container for the app.
+//  ------------------------
 
 import SwiftUI
 import SwiftData
@@ -11,13 +13,16 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
-    @State private var showWelcome = true
+    #warning("change to true after debugging")
+    @State private var showWelcome = false 
 
     var body: some View {
         ZStack {
-            Library()
-                .opacity(showWelcome ? 0 : 1)
+            NavigationView {
+                Library()
+                    .opacity(showWelcome ? 0 : 1)
                 .animation(.easeInOut(duration: 2), value: showWelcome)
+            }
             
             if showWelcome {
                 WelcomePage()

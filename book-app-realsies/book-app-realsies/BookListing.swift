@@ -3,7 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/3/24.
-//
+//  ------------------------
+//  This view is a single book card and description. 
+//  ------------------------
 
 import SwiftUI
 

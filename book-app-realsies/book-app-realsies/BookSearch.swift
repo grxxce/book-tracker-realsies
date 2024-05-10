@@ -3,7 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/7/24.
-//
+//  ------------------------
+//  This is the book search bar.
+//  ------------------------
 
 import SwiftUI
 

@@ -3,9 +3,10 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/4/24.
-//
+//  ------------------------
+//  This view is (1) passed an Image of type UIImage, (2) uses Vision to read text, (3) preforms a book search
+//  ------------------------
 
-// THIS VIEW HANDLES THE ML TO READ THE TEXT IN AN IMAGE
 
 import SwiftUI
 import Vision

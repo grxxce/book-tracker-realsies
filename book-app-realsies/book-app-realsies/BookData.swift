@@ -3,16 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/3/24.
-//
-
-import Foundation
-
-//struct Book {
-//    let title: String
-//    let author: String
-//    let image: String
-//}
-
+//  ------------------------
+//  This is the book datastructure declaration.
+//  ------------------------
 import Foundation
 
 // Define top-level response structure
@@ -50,7 +43,6 @@ struct SaleInfo: Codable {
     let saleability: String
     let isEbook: Bool
 }
-
 
 
 // Create testing book

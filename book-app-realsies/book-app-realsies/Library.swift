@@ -3,7 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/2/24.
-//
+//  ------------------------
+//  This page displays the user's saved books.
+//  ------------------------
 
 import SwiftUI
 

@@ -3,7 +3,9 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/2/24.
-//
+//  ------------------------
+//  This is the welcome page of the app.
+//  ------------------------
 
 import SwiftUI
 

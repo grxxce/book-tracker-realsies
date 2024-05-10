@@ -3,43 +3,26 @@
 //  book-app-realsies
 //
 //  Created by Grace Li on 5/2/24.
-//
+//  ------------------------
+//  This is the parent page for searching for a book. It contains the following compontents:
+//  1) Search bar - BookSearch()
+//  2) Camera icon
+//  3) Search by image - BookPhoto()
+//  4) Book listing - BookListing()
+//  ------------------------
 
 import SwiftUI
-import PhotosUI
-
-@MainActor
-final class PhotoPickerViewModel: ObservableObject {
-    @Published private(set) var selectedImage: UIImage? = nil
-    @Published var imageSelection: PhotosPickerItem? = nil {
-        didSet {
-            setImage(from: imageSelection)
-        }
-    }
-    
-    private func setImage(from selection: PhotosPickerItem?) {
-        print("picker initiated")
-        guard let selection else {return}
-        
-        Task {
-            if let data = try? await selection.loadTransferable(type: Data.self) {
-                if let uiImage = UIImage(data: data) {
-                    selectedImage = uiImage
-                    return
-                }
-            }
-        }
-    }
-}
-
 
 struct AddBook: View {
     @StateObject private var searchViewModel = SearchViewModel()
     
-//    Add requirements for Photos Picker
     @StateObject private var viewModel = PhotoPickerViewModel()
     @State private var showPhotos = false
     @State private var showPhotosPicker = false
+    
+    
+    @State private var showView = false
+    @StateObject private var model = FrameHandler()
     
     var body: some View {
         VStack {
@@ -53,13 +36,18 @@ struct AddBook: View {
                     BookSearch(searchViewModel: searchViewModel)
                     
                     
-                    //                CAMERA
+                    
+                    //                CAMERA ICON
                     Button("pick", systemImage: "camera.fill") {
                         showPhotos = true
                     }
                     .confirmationDialog("Options", isPresented: $showPhotos, titleVisibility: .hidden) {
                         Button("Take Photo") {
                             // TODO: implement take photo
+                            model.startCamera()
+                            showView = true
+                            
+                            
                         }
                         Button("Choose Existing") {
                             showPhotosPicker = true
@@ -69,14 +57,25 @@ struct AddBook: View {
                     .labelStyle(.iconOnly)
                     .font(.system(size: 30))
                     .padding(.trailing, 10)
+                    .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
+                    
+                    NavigationLink(destination: FrameView(model: model), isActive: $showView) { EmptyView() }
+
                 }
                 
-//                SEARCHING BY IMAGE
+                //                SEARCHING BY IMAGE
                 if let image = viewModel.selectedImage {
                     BookPhoto(bookPhoto: image, searchViewModel: searchViewModel)
                 }
                 
-//                BOOK LISTING
+                
+//                if showView {
+//                    VStack{
+//                        FrameView(image: model.frame)
+//                    }
+//                }
+                
+                //                BOOK LISTING
                 ScrollView {
                     VStack {
                         ForEach(BookSearch(searchViewModel: searchViewModel).searchViewModel.booksResponse?.items ?? [Book.mock]) {book in
@@ -85,7 +84,6 @@ struct AddBook: View {
                     }
                 }
                 .padding(.horizontal)
-                .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
             }
             
             Spacer()

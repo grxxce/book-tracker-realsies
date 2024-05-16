@@ -10,7 +10,9 @@ import SwiftUI
 struct FrameView: View {
     private let label = Text("frame")
     @ObservedObject var model: FrameHandler
-    
+//    @EnvironmentObject var model: FrameHandler
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var isActive : Bool
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)  // background color
@@ -29,6 +31,7 @@ struct FrameView: View {
                 Spacer()  // Pushes everything to the bottom
                 Button {
                      model.takePhoto()
+                    isActive = false
                 } label: {
                     Label {
                     } icon: {
@@ -45,12 +48,17 @@ struct FrameView: View {
                 }
                 .padding(.bottom)  // Provides padding at the bottom
             }
+        }.onChange(of: model.shouldDismissCam) { 
+            print("changed in FrameView")
+            presentationMode.wrappedValue.dismiss()
         }
     }
 }
 
-struct FrameView_Previews: PreviewProvider {
-    static var previews: some View {
-        FrameView(model: FrameHandler())
-    }
-}
+//struct FrameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView{
+//            FrameView(model: FrameHandler(), isActive: true)
+//        }
+//    }
+//}

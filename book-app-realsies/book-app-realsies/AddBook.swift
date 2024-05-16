@@ -19,10 +19,10 @@ struct AddBook: View {
     @StateObject private var viewModel = PhotoPickerViewModel()
     @State private var showPhotos = false
     @State private var showPhotosPicker = false
-    
-    
     @State private var showView = false
+    
     @StateObject private var model = FrameHandler()
+//    @EnvironmentalObject private var model = FrameHandler()
     
     var body: some View {
         VStack {
@@ -36,18 +36,15 @@ struct AddBook: View {
                     BookSearch(searchViewModel: searchViewModel)
                     
                     
-                    
                     //                CAMERA ICON
                     Button("pick", systemImage: "camera.fill") {
                         showPhotos = true
                     }
                     .confirmationDialog("Options", isPresented: $showPhotos, titleVisibility: .hidden) {
                         Button("Take Photo") {
-                            // TODO: implement take photo
                             model.startCamera()
                             showView = true
-                            
-                            
+                            print("should dismiss? ", model.shouldDismissCam)
                         }
                         Button("Choose Existing") {
                             showPhotosPicker = true
@@ -59,21 +56,53 @@ struct AddBook: View {
                     .padding(.trailing, 10)
                     .photosPicker(isPresented: $showPhotosPicker,  selection: $viewModel.imageSelection, matching: .images)
                     
-                    NavigationLink(destination: FrameView(model: model), isActive: $showView) { EmptyView() }
-
+//                    NavigationLink(destination: FrameView(model: model, isActive: $showView), isActive: $showView) {
+//                        EmptyView()
+//                    }
+                    
                 }
+                
                 
                 //                SEARCHING BY IMAGE
-                if let image = viewModel.selectedImage {
-                    BookPhoto(bookPhoto: image, searchViewModel: searchViewModel)
+                
+//                THIS WORKS BUT THE CAMERA IS IMBEDDED
+//                if showView {
+//                    FrameView(model: model, isActive: $showView)
+//                }
+                
+                NavigationLink(destination: FrameView(model: self.model, isActive: $showView), isActive: $showView) {
+                    EmptyView()
+                }
+                .onChange(of: showView) {
+                    print("showview changed: ", showView)
+                    
                 }
                 
+                .onChange(of: model.shouldDismissCam){
+                    print(model.shouldDismissCam)
+                    model.shouldDismissCam = false
+                }
+
                 
-//                if showView {
-//                    VStack{
-//                        FrameView(image: model.frame)
-//                    }
-//                }
+                if let image = model.savedPhoto {
+                    VStack{
+                        Image(uiImage: model.savedPhoto!)
+                            .resizable()
+                            .scaledToFit()
+                        BookPhoto(bookPhoto: image, searchViewModel: searchViewModel)
+                            .onAppear {
+                                model.savedPhoto = nil
+                            }
+                    }
+                }
+                
+                if let image = viewModel.selectedImage{
+                    BookPhoto(bookPhoto: image, searchViewModel: searchViewModel)
+                        .onAppear {
+                            viewModel.selectedImage = nil
+                        }
+                }
+                
                 
                 //                BOOK LISTING
                 ScrollView {
@@ -85,11 +114,17 @@ struct AddBook: View {
                 }
                 .padding(.horizontal)
             }
-            
             Spacer()
         }
+        .onChange(of: model.shouldDismissCam) {
+            print("dismiss camera in add book? ", model.shouldDismissCam)
+            print("show view changed!!")
+            showView = false
+        }
         .padding([.top])
+        
     }
+    
 }
 
 #Preview {

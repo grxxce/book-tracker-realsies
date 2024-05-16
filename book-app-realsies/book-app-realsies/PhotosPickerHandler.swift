@@ -13,7 +13,7 @@ import PhotosUI
 
 @MainActor
 final class PhotoPickerViewModel: ObservableObject {
-    @Published private(set) var selectedImage: UIImage? = nil
+    @Published var selectedImage: UIImage? = nil
     @Published var imageSelection: PhotosPickerItem? = nil {
         didSet {
             setImage(from: imageSelection)

@@ -24,7 +24,8 @@ struct BookPhoto: View {
                 .font(.footnote)
             }
         .onAppear{
-            read(bookPhoto: UIImage(imageLiteralResourceName: "theanthreviewed")) { recognizedText in
+//            read(bookPhoto: UIImage(imageLiteralResourceName: "theanthreviewed")) { recognizedText in
+            read(bookPhoto: bookPhoto) { recognizedText in
                 DispatchQueue.main.async {
                     if let title = recognizedText {
                         self.recognizedTitle = title

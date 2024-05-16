@@ -11,20 +11,14 @@ import UIKit
 
 class FrameHandler: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var frame: CGImage?
+    @Published var shouldDismissCam = false
+    @Published var savedPhoto : UIImage?
     private var permissionGranted = true
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private let context = CIContext()
     private var photoOutput: AVCapturePhotoOutput? // Correct type for photo output
-
-//    private var deviceInput: AVCaptureDeviceInput?
     
-//    override init() {
-//        super.init()
-//        setupCaptureSession()
-//    }
-    
-//
     func startCamera () {
         print("checking permission")
         checkPermission { [weak self] granted in
@@ -100,8 +94,8 @@ class FrameHandler: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
             self.captureSession.commitConfiguration()
         }
     }
-
-
+    
+    
     func takePhoto() {
         print("attempting to take photo")
         guard let photoOutput = self.photoOutput else { return }
@@ -115,9 +109,6 @@ class FrameHandler: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
                 photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
             }
             
-//            let isFlashAvailable = self.deviceInput?.device.isFlashAvailable ?? false
-//            photoSettings.flashMode = isFlashAvailable ? .auto : .off
-//            photoSettings.isHighResolutionPhotoEnabled = true
             if let previewPhotoPixelFormatType = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPhotoPixelFormatType]
             }
@@ -125,9 +116,10 @@ class FrameHandler: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
             
             photoOutput.capturePhoto(with: photoSettings, delegate: self)
         }
+        
+        
     }
 }
-
 
 extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -138,6 +130,27 @@ extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         DispatchQueue.main.async { [weak self] in
             self?.frame = cgImage
+        }
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            print("Error processing photo: \(error)")
+            return
+        }
+        
+        guard let imageData = photo.fileDataRepresentation(),
+              let dataImage = UIImage(data: imageData) else {
+            print("Could not get image data representation")
+            return
+        }
+        
+        // Use the correct image orientation
+        let imageWithCorrectOrientation = UIImage(cgImage: dataImage.cgImage!, scale: 1.0, orientation: dataImage.imageOrientation)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.savedPhoto = imageWithCorrectOrientation
+            self?.shouldDismissCam = true
         }
     }
     
